@@ -29,7 +29,7 @@
                 },
                 {
                     "name": "constant.language",
-                    "match": "(?<![#;].*|[A-Za-z]+.*:\\s*)(?:null|acc|clk|stdin|stdout|stderr|gfx|wsz|hsz|xsz|ysz|&pxl|\\*pxl|kb0)(?!\\S)"
+                    "match": "(?<![#;].*|[A-Za-z]+.*:\\s*)(?:null|rng|acc|clk|stdin|stdout|stderr|gfx|wsz|hsz|xsz|ysz|&pxl|\\*pxl|kb0)(?!\\S)"
                 },
                 {
                     "name": "comment.line",

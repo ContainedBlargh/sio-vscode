@@ -2,7 +2,7 @@
     "name": "sio",
     "description": "The SIO Programming Language.",
     "repository": {
-        "type": "git",
+        "type": "git",e
         "url": "https://github.com/ContainedBlargh/sio-vscode"
     },
     "author": "ContainedBlargh",
