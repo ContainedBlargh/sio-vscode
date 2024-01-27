@@ -1,6 +1,10 @@
 {
     "name": "sio",
     "description": "The SIO Programming Language.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ContainedBlargh/sio-vscode"
+    },
     "author": "ContainedBlargh",
     "license": "MIT",
     "version": "0.0.1",
