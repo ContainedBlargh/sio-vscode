@@ -1,0 +1,57 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "SIO",
+    "fileTypes": [
+        "sio"
+    ],
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#string"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.sio",
+                    "match": "\\b([^A-Za-z!@#$%\\^&\\*\\-_\\+\\-\\:\\?\\<\\>\\=\\/]\\d+)\\b"
+                },
+                {
+                    "name": "keyword.control.sio",
+                    "match": "(?<![#;].*|[A-Za-z]+.*:\\s*)[+\\-@]?\\s*(?:end|nop|mov|swp|jmp|slp|slx|gen|add|sub|mul|div|not|cst|inc|dec|dgt|dst|teq|tgt|tlt|tcp)(?!\\S)"
+                },
+                {
+                    "name": "keyword.control.sio",
+                    "match": "[A-Za-z]+\\w*:"
+                },
+                {
+                    "name": "constant.language",
+                    "match": "(?<![#;].*|[A-Za-z]+.*:\\s*)(?:null|acc|clk|stdin|stdout|stderr|gfx|wsz|hsz|xsz|ysz|&pxl|\\*pxl|kb0)(?!\\S)"
+                },
+                {
+                    "name": "comment.line",
+                    "match": "[#;].*$"
+                },
+                {
+                    "name": "variable",
+                    "match": "[\\$&\\*][A-Za-z]+\\w*"
+                }
+            ]
+        },
+        "string": {
+            "name": "string.quoted.double.sio",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    },
+    "scopeName": "source.sio"
+}

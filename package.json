@@ -1,29 +1,50 @@
 {
-  "name": "REPLACE_ME",
-  "description": "REPLACE_ME",
-  "author": "REPLACE_ME",
-  "license": "MIT",
-  "version": "1.0.0",
-  "publisher": "REPLACE_ME",
-  "categories": [],
-  "engines": {
-    "vscode": "^1.75.0"
-  },
-  "activationEvents": [
-    "onLanguage"
-  ],
-  "main": "./client/out/extension",
-  "contributes": {
-    "configuration": {}
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -b",
-    "watch": "tsc -b -w",
-    "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
-  },
-  "devDependencies": {
-    "@types/node": "^20.5.7",
-    "typescript": "^5.2.2"
-  }
+    "name": "sio",
+    "description": "The SIO Programming Language.",
+    "author": "ContainedBlargh",
+    "license": "MIT",
+    "version": "0.0.1",
+    "publisher": "SIO",
+    "categories": [
+        "Programming Languages"
+    ],
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "activationEvents": [
+        "onLanguage:sio"
+    ],
+    "main": "./client/out/extension",
+    "contributes": {
+        "configuration": {},
+        "languages": [
+            {
+                "id": "sio",
+                "extensions": [
+                    ".sio"
+                ],
+                "aliases": [
+                    "SIO",
+                    "sio"
+                ]
+            }
+        ],
+        "grammars": [
+            {
+                "language": "sio",
+                "scopeName": "source.sio",
+                "path": "./syntaxes/sio.tmLanguage.json"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -b",
+        "watch": "tsc -b -w",
+        "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+    },
+    "devDependencies": {
+        "@types/node": "^20.5.7",
+        "typescript": "^5.2.2"
+    }
 }
